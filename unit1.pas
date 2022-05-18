@@ -24,9 +24,11 @@ type
     Label1: TLabel;
     Label2: TLabel;
     MainMenu1: TMainMenu;
+    MainMenu2: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
     MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -45,6 +47,7 @@ type
       );
     procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
+    procedure MenuItem12Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
@@ -64,7 +67,8 @@ var
   imE, imS : array [0..319,0..239] of byte;
   r, g, b : byte;
   cor : TColor;
-  c, i, j, x, y, alt, larg, Qtde : integer;
+  c, i, j, x, y, alt, larg : integer;
+  Qtde : LongInt;
 
 
 implementation
@@ -91,7 +95,7 @@ begin
        end;
 alt := Image1.height;
 larg := Image1.Width;
-Qtde := (alt + larg)/10;
+Qtde := (alt + larg) div 10;
 for i := 0 to Qtde do
     begin
     x := random(alt);
@@ -200,6 +204,16 @@ end;
 procedure TForm1.MenuItem11Click(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.MenuItem12Click(Sender: TObject);
+begin
+  // Inverte imagem
+  for i:= 0 to 240 - 1 do
+   for j:= 0 to 320 - 1 do
+    begin
+    Image2.Canvas.Pixels[i,j] := Image1.Canvas.Pixels[320-i,j];
+    end;
 end;
 
 procedure TForm1.MenuItem2Click(Sender: TObject);
