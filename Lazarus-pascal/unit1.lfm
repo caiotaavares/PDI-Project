@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 248
-  Height = 736
-  Top = 0
+  Left = 117
+  Height = 702
+  Top = 14
   Width = 891
   Caption = 'Form1'
-  ClientHeight = 716
-  ClientWidth = 891
+  ClientHeight = 0
+  ClientWidth = 0
   Menu = MainMenu1
   OnCreate = FormCreate
   LCLVersion = '2.2.0.4'
@@ -114,23 +114,42 @@ object Form1: TForm1
     Width = 32
     OnChange = Edit3Change
     TabOrder = 3
-    Text = 'Edit3'
+    Text = 'R'
   end
   object Edit4: TEdit
     Left = 96
     Height = 23
     Top = 568
     Width = 32
+    OnChange = Edit4Change
     TabOrder = 4
-    Text = 'Edit4'
+    Text = 'G'
   end
   object Button2: TButton
-    Left = 392
+    Left = 184
     Height = 21
-    Top = 336
+    Top = 568
     Width = 56
     Caption = 'Button2'
+    OnClick = Button2Click
     TabOrder = 5
+  end
+  object Edit5: TEdit
+    Left = 136
+    Height = 23
+    Top = 568
+    Width = 32
+    TabOrder = 6
+    Text = 'B'
+  end
+  object Edit6: TEdit
+    Left = 256
+    Height = 23
+    Top = 568
+    Width = 72
+    OnChange = Edit6Change
+    TabOrder = 7
+    Text = 'HSL'
   end
   object MainMenu1: TMainMenu
     Left = 824
@@ -193,5 +212,9 @@ object Form1: TForm1
   object SaveDialog1: TSaveDialog
     Left = 816
     Top = 224
+  end
+  object MainMenu2: TMainMenu
+    Left = 829
+    Top = 562
   end
 end
