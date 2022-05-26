@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel='stylesheet' href="./style/style.css">
+</head>
+
+<body>
+  <header class = "men">
+    <div id="item-menu">
+      <a href="/" id="item-home"><p>Home</p></a>
+    </div>
+    
+    <div id="item-menu">
+      <a href="pages/escala_cinza.html" id="item-grayscale"><p>Escala cinza</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="pages/imagem_negativa.html" id="item-negative"><p>Inverte colorida (Negativo)</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="pages/canais_rgb.html" id="item-rgb"><p>Canais da imagem (R,G,B)</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="pages/RGB_HSL.html" id="item-rgb"><p>Manipular RGB - HSL</p></a>
+    </div>
+  </header>
+
+  <main>
+    <menu>
+      <h2>Imagem</h2>
+      <label for="image1"> Abrir imagem: </label>
+			<input id="image1" type="file" accept="image/*"/>
+    </menu>
+     <section>
+      <div class="canvas-box">
+        <p>Entrada</p>
+        <canvas id="frame1"></canvas>
+      </div>
+      <div id="rgb-box">
+        <span>RGB:</span>
+			  <div id="rgb-color-picker"></div>
+
+        <h3>RGB</h3>
+        <span id="r">R: <span></span> </span>
+			  <span id="g">G: <span></span> </span>
+			  <span id="b">B: <span></span> </span>
+        
+        <h3>Coordenadas</h3>
+        <span id="x">x: <span></span> </span>
+			  <span id="y">y: <span></span> </span>
+    </div>
+     </section>
+  </main>
+</body>
+
+<script src="script/interface.js"></script>
+
+</html>

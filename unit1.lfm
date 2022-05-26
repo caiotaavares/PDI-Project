@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 280
-  Height = 575
-  Top = 28
-  Width = 881
+  Left = 320
+  Height = 702
+  Top = 18
+  Width = 891
   Caption = 'Form1'
-  ClientHeight = 555
-  ClientWidth = 881
+  ClientHeight = 682
+  ClientWidth = 891
   Menu = MainMenu1
   OnCreate = FormCreate
   LCLVersion = '2.2.0.4'
@@ -63,6 +63,7 @@ object Form1: TForm1
     Height = 23
     Top = 104
     Width = 56
+    OnChange = Edit1Change
     TabOrder = 1
     Text = 'Edit1'
   end
@@ -71,6 +72,7 @@ object Form1: TForm1
     Height = 23
     Top = 136
     Width = 56
+    OnChange = Edit2Change
     TabOrder = 2
     Text = 'Edit2'
   end
@@ -88,6 +90,7 @@ object Form1: TForm1
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
+    OnClick = Label1Click
   end
   object Label2: TLabel
     Left = 376
@@ -103,6 +106,63 @@ object Form1: TForm1
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
+  end
+  object Edit3: TEdit
+    Left = 56
+    Height = 23
+    Top = 568
+    Width = 32
+    OnChange = Edit3Change
+    TabOrder = 3
+    Text = 'Edit3'
+  end
+  object Edit4: TEdit
+    Left = 96
+    Height = 23
+    Top = 568
+    Width = 32
+    TabOrder = 4
+    Text = 'Edit4'
+  end
+  object Button2: TButton
+    Left = 184
+    Height = 21
+    Top = 568
+    Width = 56
+    Caption = 'Button2'
+    TabOrder = 5
+  end
+  object Edit5: TEdit
+    Left = 136
+    Height = 23
+    Top = 568
+    Width = 32
+    TabOrder = 6
+    Text = 'Edit5'
+  end
+  object Edit6: TEdit
+    Left = 256
+    Height = 23
+    Top = 568
+    Width = 32
+    TabOrder = 7
+    Text = 'Edit6'
+  end
+  object Edit7: TEdit
+    Left = 296
+    Height = 23
+    Top = 568
+    Width = 32
+    TabOrder = 8
+    Text = 'Edit7'
+  end
+  object Edit8: TEdit
+    Left = 336
+    Height = 23
+    Top = 568
+    Width = 32
+    TabOrder = 9
+    Text = 'Edit8'
   end
   object MainMenu1: TMainMenu
     Left = 824
@@ -153,7 +213,7 @@ object Form1: TForm1
         end
       end
       object MenuItem12: TMenuItem
-        Caption = 'Inverter Imagem'
+        Caption = 'Espelhar imagem (bugado)'
         OnClick = MenuItem12Click
       end
     end
@@ -167,7 +227,7 @@ object Form1: TForm1
     Top = 224
   end
   object MainMenu2: TMainMenu
-    Left = 365
-    Top = 15
+    Left = 829
+    Top = 562
   end
 end

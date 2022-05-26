@@ -14,8 +14,15 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Edit7: TEdit;
+    Edit8: TEdit;
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
@@ -41,10 +48,14 @@ type
     OpenDialog1: TOpenDialog;
     SaveDialog1: TSaveDialog;
     procedure Button1Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
+    procedure Edit3Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer
       );
+    procedure Label1Click(Sender: TObject);
     procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
@@ -162,6 +173,21 @@ begin
     Ime[i,j] := Ims[i,j];
 end;
 
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Edit2Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Edit3Change(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 
@@ -182,6 +208,11 @@ begin
   for i:= 0 to Image5.Width - 1 do
    for j:= 0 to Image5.height - 1 do
     Image5.Canvas.Pixels[i,j] := cor;
+
+end;
+
+procedure TForm1.Label1Click(Sender: TObject);
+begin
 
 end;
 
@@ -208,9 +239,9 @@ end;
 
 procedure TForm1.MenuItem12Click(Sender: TObject);
 begin
-  // Inverte imagem
-  for i:= 0 to 240 - 1 do
-   for j:= 0 to 320 - 1 do
+  // Espelha imagem
+  for i:= 0 to 320 - 1 do
+   for j:= 0 to 240 - 1 do
     begin
     Image2.Canvas.Pixels[i,j] := Image1.Canvas.Pixels[320-i,j];
     end;
