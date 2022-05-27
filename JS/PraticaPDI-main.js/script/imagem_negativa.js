@@ -1,12 +1,9 @@
 const canvas1 = document.getElementById("frame1");
 const ctx1 = canvas1.getContext('2d');
-
 const canvasResult = document.getElementById("frame3");
 const ctxResult = canvasResult.getContext('2d');
 
 document.getElementById('image1').onchange = onUpdateImage;
-
-//document.getElementById('grayscale-button').onclick = grayscale;
 document.getElementById('negative-button').onclick = negative;
 
 const item = document.getElementById("item-negative");

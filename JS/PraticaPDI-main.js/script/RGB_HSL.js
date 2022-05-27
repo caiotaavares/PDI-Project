@@ -4,6 +4,7 @@
 
 function rgbToHsl(){
     
+    // Get R G and B values
     let r = parseInt(document.getElementById("r-input").value);
     let g = parseInt(document.getElementById("b-input").value);
     let b = parseInt(document.getElementById("g-input").value);
@@ -27,6 +28,7 @@ function rgbToHsl(){
         h /= 6;
     }
 
+    // Put H, S and L values in input
     document.getElementById('h-res').value = [h];
     document.getElementById('s-res').value = [s];
     document.getElementById('l-res').value = [l];
@@ -36,6 +38,7 @@ function rgbToHsl(){
 
 function hslToRgb(){
 
+    // Get H, S and L values
     var h = parseInt(document.getElementById("h-input").value);
     var s = parseInt(document.getElementById("s-input").value);
     var l = parseInt(document.getElementById("l-input").value);
@@ -65,6 +68,7 @@ function hslToRgb(){
     // g = Math.round(g * 255);
     // b = Math.round(b * 255);
 
+    // Put R, G and B value in input
     document.getElementById('r-res').value = [r];
     document.getElementById('g-res').value = [g];
     document.getElementById('b-res').value = [g];
