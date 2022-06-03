@@ -16,6 +16,7 @@ function onUpdateImage(event){
 	drawImage(url);
 }
 
+// desenha a imagem
 function drawImage(url) {
 	let image = new Image();
 
@@ -33,6 +34,7 @@ function drawImage(url) {
 	image.src = url;	
 }
 
+// Aplica o negativo
 function negative(){
 
 	const imageData = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
