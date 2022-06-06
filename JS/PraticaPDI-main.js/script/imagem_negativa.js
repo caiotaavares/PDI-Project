@@ -3,12 +3,18 @@ const ctx1 = canvas1.getContext('2d');
 const canvasResult = document.getElementById("frame3");
 const ctxResult = canvasResult.getContext('2d');
 
+//Pega a imagem do input
 document.getElementById('image1').onchange = onUpdateImage;
+//Executa a função que negativa a imagem
 document.getElementById('negative-button').onclick = negative;
 
+//Poe o resultado da operação na tela
 const item = document.getElementById("item-negative");
 item.style.backgroundColor = '#171C26';
 
+/**
+ * Desenha a imagem na tela de Entrada
+ */
 function onUpdateImage(event){
 	const file = event.target.files[0];
 	const url = URL.createObjectURL(file);
@@ -16,7 +22,6 @@ function onUpdateImage(event){
 	drawImage(url);
 }
 
-// desenha a imagem
 function drawImage(url) {
 	let image = new Image();
 
@@ -33,6 +38,9 @@ function drawImage(url) {
 	
 	image.src = url;	
 }
+/**
+ * Desenha a imagem na tela de Entrada (FIM)
+ */
 
 // Aplica o negativo
 function negative(){

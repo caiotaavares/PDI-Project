@@ -1,17 +1,21 @@
+//Pega o contexto da imagem original
 const canvas1 = document.getElementById("frame0");
 const ctx1 = canvas1.getContext('2d');
 
+// Pega o contexto da imagem 1
 const canvasResultR = document.getElementById("frame1");
 const ctxResultR = canvasResultR.getContext('2d');
 
+//Pega o contexto da imagem 2
 const canvasResultG = document.getElementById("frame3");
 const ctxResultG = canvasResultG.getContext('2d');
 
+//Pega o contexto da imagem 3
 const canvasResultB = document.getElementById("frame4");
 const ctxResultB = canvasResultB.getContext('2d');
 
 document.getElementById('image1').onchange = onUpdateImage;
-
+//Executa rgb quando clicado
 document.getElementById('channelsrgb-button').onclick = rgb;
 
 const item = document.getElementById("item-rgb");
@@ -43,15 +47,15 @@ function drawImage(url) {
 
 function rgb(){
 
-  const imageData = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
+  	const imageData = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
 	const data = imageData.data;
   
 	const imageDataR = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
-  const imageDataG = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
-  const imageDataB = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
+  	const imageDataG = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
+  	const imageDataB = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
 	const dataR = imageDataR.data;
-  const dataG = imageDataG.data;
-  const dataB = imageDataB.data;
+  	const dataG = imageDataG.data;
+  	const dataB = imageDataB.data;
 
 	for (let i = 0; i < data.length; i += 4) {
 		dataR[i]     = data[i];
