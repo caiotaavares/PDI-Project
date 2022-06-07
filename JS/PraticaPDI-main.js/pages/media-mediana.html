@@ -25,6 +25,7 @@
     </div>
     <div id="item-menu">
       <a href="./RGB_HSL.html" id="item-rgb"><p>Manipular RGB - HSL</p></a>
+    </div>
     </div><div id="item-menu">
       <a href="./ruido.html" id="item-rgb"><p>Manipular Ruídos</p></a>
     </div>
@@ -38,33 +39,31 @@
       <h2>Imagem</h2>
       <label for="image1"> Abrir imagem: </label>
 			<input id="image1" type="file" accept="image/*"/>
-      <h2>Aplicar</h2>
-      <button class="button" id="channelsrgb-button">Aplicar função</button>
-      <div class="canvas-box">
-        <h2 style="margin-top: 25px;">Entrada:</h2>
-        <canvas id="frame0"></canvas>
+      <h2>Função</h2>
+      <div id="container-radio">
+      <input type="radio" id="radio-button" name="function-grayscale" value="media" checked>
+      <label for="html">Filtro da Média</label><br>
+      <input type="radio" id="radio-button" name="function-grayscale" value="mediana">
+      <label for="css">Filtro da Mediana</label><br>
       </div>
+      <h2>Aplicar</h2>
+      <button class="button" id="grayscale-button">Aplicar função</button>
     </menu>
 
     <section>
-      <div class="canvas-box fram-tam">
-        <p>Saída R</p>
+      <div class="canvas-box">
+        <p>Entrada</p>
         <canvas id="frame1"></canvas>
       </div>
 
-      <div class="canvas-box fram-tam">
-        <p>Saída G</p>
+      <div class="canvas-box">
+        <p>Saída</p>
         <canvas id="frame3"></canvas>
       </div>
-
-      <div class="canvas-box fram-tam">
-        <p>Saída B</p>
-        <canvas id="frame4"></canvas>
-      </div>      
+      <!-- <canvas id="frame3"></canvas> -->
     </section>
   </main>
 </body>
 
-<script src="../script/canais_rgb.js"></script>
-
+<script src="../script/escala_cinza.js"></script>
 </html>
