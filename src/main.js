@@ -158,7 +158,6 @@ const addNoise = () => {
 
 };
 
-// Pegar os canais RGB.
 const copyToCanvas = (image) => {
   const can = document.createElement("canvas");
   can.width = "640" || image.width;
@@ -244,21 +243,21 @@ const getRGBChannel = () => {
   let imgData2 = imgData, imgData3 = imgData, imgData4 = imgData;
   let pixels = imgData.data;
 
-  // Red
+  //Red
   for(let i = 0; i < imgData2.data.length; i+=4) {
     imgData2.data[i] = imgData2.data[i];
     imgData2.data[i + 1] = 0;
     imgData2.data[i + 2] = 0;
   }
 
-  // Green
+  //Green
   for(let i = 0; i < imgData3.data.length; i+=4) {
     imgData3.data[i] = 0;
     imgData3.data[i + 1] = imgData3.data[i + 1];
     imgData3.data[i + 2] = 0;
   }
 
-  // Blue
+  //Blue
   for(let i = 0; i < imgData4.data.length; i+=4) {
     imgData4.data[i] = 0;
     imgData4.data[i + 1] = 0;
@@ -274,7 +273,6 @@ const pick = (event, destination) => {
   let pixel = context1.getImageData(x, y, 1, 1);
   let data = pixel.data;
 
-  // Pegando as cores dos pixeis
   const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
 
   destination.style.background = rgba;

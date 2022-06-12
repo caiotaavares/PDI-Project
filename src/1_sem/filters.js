@@ -42,20 +42,12 @@ const convolutionAverage = (imgData, kernel) => {
 // Filtro da média.
 const filterByAverage = () => {
   console.log("** Filtro por média **");
-  // pegando referencia do canvas.
   let canvas2 = document.getElementById("canvas-pdi2");
-  // let canvas3 = document.getElementById("canvas-pdi3");
-  // let canvas4 = document.getElementById("canvas-pdi4");
-  // pegando referencia do contexto de renderização dele.
-  let context2 = canvas2.getContext("2d");
-  // let context3 = canvas3.getContext("2d");
-  // let context4 = canvas4.getContext("2d");
 
-  // Pegando o conteudo da imagem.
+  let context2 = canvas2.getContext("2d");
 
   let imgData = context1.getImageData(0, 0, canvas1.width, canvas1.height);
   
-  // Máscara.
   let m = [
     [1.0, 1.0, 1.0],
     [1.0, 1.0, 1.0],
@@ -73,13 +65,11 @@ const filterByAverage = () => {
   console.table({imgData, m});
 
   context2.putImageData(imgData, 0, 0);
-  // context3.putImageData(imgData, 0, 0);
-  // context4.putImageData(imgData, 0, 0);
 
   console.log("Sucesso");
 }
 
-// Filtro da mediana
+
 const convolutionMedian = (imgData, mask) => {
   let pixelAt = bindPixelAt(imgData.data, imgData.width);
   let clampedArray = [];
@@ -96,7 +86,6 @@ const convolutionMedian = (imgData, mask) => {
       mask[7] = pixelAt(x, y + 1);
       mask[8] = pixelAt(x + 1, y + 1);
       bubbleSort(mask, mask.length);
-      // R, G, B, A. 255 é para a transparência.
       result.push(mask[4], mask[4], mask[4], 255);
     }
   }
@@ -114,19 +103,9 @@ const convolutionMedian = (imgData, mask) => {
   return clampedArray;
 };
 
-// Filtro da mediana.
 const filterByMedian = () => {
-  console.log("** Filtro por mediana **");
-  
   let canvas2 = document.getElementById("canvas-pdi2");
-  // let canvas3 = document.getElementById("canvas-pdi3");
-  // let canvas4 = document.getElementById("canvas-pdi4");
-
   let context2 = canvas2.getContext("2d");
-  // let context3 = canvas3.getContext("2d");
-  // let context4 = canvas4.getContext("2d");
-
-  // Conteudo da imagem
   let imgData = context1.getImageData(0, 0, canvas1.width, canvas1.height);
   
   let m = [1, 1, 1, 1, 1, 1, 1, 1, 1];
@@ -138,7 +117,4 @@ const filterByMedian = () => {
   imgData = imgDataResult;
 
   context2.putImageData(imgData, 0, 0);
-  // context3.putImageData(imgData, 0, 0);
-  // context4.putImageData(imgData, 0, 0);
-
 }
