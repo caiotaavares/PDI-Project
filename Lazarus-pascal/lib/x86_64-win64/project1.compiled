@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="D:\Programas\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1411537227"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -FiD:\Documents\Estudos\Faculdade\Facul1\Graduação\Terceiro_Semestre\PDI\Pratica2022\Lazarus-pascal\lib\x86_64-win64 -FuD:\Programas\lazarus\lcl\units\x86_64-win64\win32 -FuD:\Programas\lazarus\lcl\units\x86_64-win64 -FuD:\Programas\lazarus\components\freetype\lib\x86_64-win64 -FuD:\Programas\lazarus\components\lazutils\lib\x86_64-win64 -FuD:\Programas\lazarus\packager\units\x86_64-win64 -FuD:\Documents\Estudos\Faculdade\Facul1\Graduação\Terceiro_Semestre\PDI\Pratica2022\Lazarus-pascal\ -FUD:\Documents\Estudos\Faculdade\Facul1\Graduação\Terceiro_Semestre\PDI\Pratica2022\Lazarus-pascal\lib\x86_64-win64\ -FED:\Documents\Estudos\Faculdade\Facul1\Graduação\Terceiro_Semestre\PDI\Pratica2022\Lazarus-pascal\ -oD:\Documents\Estudos\Faculdade\Facul1\Graduação\Terceiro_Semestre\PDI\Pratica2022\Lazarus-pascal\project1.exe -dLCL -dLCLwin32 project1.lpr"/>
-  <Complete Value="False"/>
-</CONFIG>
