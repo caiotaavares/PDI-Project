@@ -1,7 +1,6 @@
 const thresholding = (imgData, threshold, light, dark) => {
   let dataSize = imgData.data.length;
   let pixels = imgData.data;
-  console.log("\t Realizando Limiarização", pixels, dataSize, threshold, light, dark);
   for(let i = 0; i < dataSize; i+=4) {
     let v = parseInt(pixels[i]*0.2126 + pixels[i + 1]*0.7152 + pixels[i + 2]*0.0722);
     if(v >= threshold) {
@@ -20,16 +19,15 @@ const thresholding = (imgData, threshold, light, dark) => {
 };
 
 $("#btn-limiar").on("click", () => {
-  console.log("** Limiarização **");
   $("#threshold-result").empty();
 
   let canvas2 = document.getElementById("canvas-pdi2");
-  let canvas3 = document.getElementById("canvas-pdi3");
-  let canvas4 = document.getElementById("canvas-pdi4");
+  // let canvas3 = document.getElementById("canvas-pdi3");
+  // let canvas4 = document.getElementById("canvas-pdi4");
 
   let context2 = canvas2.getContext("2d");
-  let context3 = canvas3.getContext("2d");
-  let context4 = canvas4.getContext("2d");
+  // let context3 = canvas3.getContext("2d");
+  // let context4 = canvas4.getContext("2d");
 
   let imgData = context1.getImageData(0, 0, canvas1.width, canvas1.height);
   let t = 0;
@@ -43,8 +41,7 @@ $("#btn-limiar").on("click", () => {
     imgData.data.set(result);
   
     context2.putImageData(imgData, 0, 0);
-    context3.putImageData(imgData, 0, 0);
-    context4.putImageData(imgData, 0, 0);
-    $("#threshold-result").append("Sucesso ao realizar a operação!");
+    // context3.putImageData(imgData, 0, 0);
+    // context4.putImageData(imgData, 0, 0);
   }
 });

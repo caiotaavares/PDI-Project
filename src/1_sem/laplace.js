@@ -12,7 +12,6 @@ let kernel2 = [
 
 let laplaceData = [];
 const sharpenning = (imgData) => {
-  console.log("** Sharpenning **");
   let clampedArray = [];
   let pixelAt = bindPixelAt(imgData.data, imgData.width);
 
@@ -44,7 +43,6 @@ const sharpenning = (imgData) => {
 }
 
 const laplace2 = (imgData) => {
-  console.log("** Sharpenning **");
   let clampedArray = [];
   let pixelAt = bindPixelAt(imgData.data, imgData.width);
 
@@ -77,12 +75,12 @@ const laplace2 = (imgData) => {
 $("#btn-laplace-sharp").on("click", () => {
 
   let canvas2 = document.getElementById("canvas-pdi2");
-  let canvas3 = document.getElementById("canvas-pdi3");
-  let canvas4 = document.getElementById("canvas-pdi4");
+  // let canvas3 = document.getElementById("canvas-pdi3");
+  // let canvas4 = document.getElementById("canvas-pdi4");
 
   let context2 = canvas2.getContext("2d");
-  let context3 = canvas3.getContext("2d");
-  let context4 = canvas4.getContext("2d");
+  // let context3 = canvas3.getContext("2d");
+  // let context4 = canvas4.getContext("2d");
 
   let imgData = context1.getImageData(0, 0, canvas1.width, canvas1.height);
   let result = sharpenning(imgData);
@@ -90,19 +88,19 @@ $("#btn-laplace-sharp").on("click", () => {
   imgData = result;
 
   context2.putImageData(imgData, 0, 0);
-  context3.putImageData(imgData, 0, 0);
-  context4.putImageData(imgData, 0, 0);
+  // context3.putImageData(imgData, 0, 0);
+  // context4.putImageData(imgData, 0, 0);
 });
 
 
 $("#btn-laplace2").on("click", () => {
   let canvas2 = document.getElementById("canvas-pdi2");
-  let canvas3 = document.getElementById("canvas-pdi3");
-  let canvas4 = document.getElementById("canvas-pdi4");
+  // let canvas3 = document.getElementById("canvas-pdi3");
+  // let canvas4 = document.getElementById("canvas-pdi4");
 
   let context2 = canvas2.getContext("2d");
-  let context3 = canvas3.getContext("2d");
-  let context4 = canvas4.getContext("2d");
+  // let context3 = canvas3.getContext("2d");
+  // let context4 = canvas4.getContext("2d");
 
   let imgData = context1.getImageData(0, 0, canvas1.width, canvas1.height);
   let result = laplace2(imgData);
@@ -110,6 +108,6 @@ $("#btn-laplace2").on("click", () => {
   imgData = result;
 
   context2.putImageData(imgData, 0, 0);
-  context3.putImageData(imgData, 0, 0);
-  context4.putImageData(imgData, 0, 0);
+  // context3.putImageData(imgData, 0, 0);
+  // context4.putImageData(imgData, 0, 0);
 });

@@ -1,12 +1,12 @@
 // Binarização.
 const binarization = () => {
   let canvas2 = document.getElementById("canvas-pdi2");
-  let canvas3 = document.getElementById("canvas-pdi3");
-  let canvas4 = document.getElementById("canvas-pdi4");
+  // let canvas3 = document.getElementById("canvas-pdi3");
+  // let canvas4 = document.getElementById("canvas-pdi4");
 
   let context2 = canvas2.getContext("2d");
-  let context3 = canvas3.getContext("2d");
-  let context4 = canvas4.getContext("2d");
+  // let context3 = canvas3.getContext("2d");
+  // let context4 = canvas4.getContext("2d");
 
   let img2 = document.getElementById("canvas-pdi1");
 
@@ -34,8 +34,8 @@ const binarization = () => {
   }
   imgData.data = pixels;
   context2.putImageData(imgData, 0, 0);
-  context3.putImageData(imgData, 0, 0);
-  context4.putImageData(imgData, 0, 0);
+  // context3.putImageData(imgData, 0, 0);
+  // context4.putImageData(imgData, 0, 0);
 
   return "Sucesso";
 };

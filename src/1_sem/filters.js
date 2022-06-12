@@ -44,12 +44,12 @@ const filterByAverage = () => {
   console.log("** Filtro por média **");
   // pegando referencia do canvas.
   let canvas2 = document.getElementById("canvas-pdi2");
-  let canvas3 = document.getElementById("canvas-pdi3");
-  let canvas4 = document.getElementById("canvas-pdi4");
+  // let canvas3 = document.getElementById("canvas-pdi3");
+  // let canvas4 = document.getElementById("canvas-pdi4");
   // pegando referencia do contexto de renderização dele.
   let context2 = canvas2.getContext("2d");
-  let context3 = canvas3.getContext("2d");
-  let context4 = canvas4.getContext("2d");
+  // let context3 = canvas3.getContext("2d");
+  // let context4 = canvas4.getContext("2d");
 
   // Pegando o conteudo da imagem.
 
@@ -73,8 +73,8 @@ const filterByAverage = () => {
   console.table({imgData, m});
 
   context2.putImageData(imgData, 0, 0);
-  context3.putImageData(imgData, 0, 0);
-  context4.putImageData(imgData, 0, 0);
+  // context3.putImageData(imgData, 0, 0);
+  // context4.putImageData(imgData, 0, 0);
 
   console.log("Sucesso");
 }
@@ -119,12 +119,12 @@ const filterByMedian = () => {
   console.log("** Filtro por mediana **");
   
   let canvas2 = document.getElementById("canvas-pdi2");
-  let canvas3 = document.getElementById("canvas-pdi3");
-  let canvas4 = document.getElementById("canvas-pdi4");
+  // let canvas3 = document.getElementById("canvas-pdi3");
+  // let canvas4 = document.getElementById("canvas-pdi4");
 
   let context2 = canvas2.getContext("2d");
-  let context3 = canvas3.getContext("2d");
-  let context4 = canvas4.getContext("2d");
+  // let context3 = canvas3.getContext("2d");
+  // let context4 = canvas4.getContext("2d");
 
   // Conteudo da imagem
   let imgData = context1.getImageData(0, 0, canvas1.width, canvas1.height);
@@ -138,7 +138,7 @@ const filterByMedian = () => {
   imgData = imgDataResult;
 
   context2.putImageData(imgData, 0, 0);
-  context3.putImageData(imgData, 0, 0);
-  context4.putImageData(imgData, 0, 0);
+  // context3.putImageData(imgData, 0, 0);
+  // context4.putImageData(imgData, 0, 0);
 
 }
