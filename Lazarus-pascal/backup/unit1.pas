@@ -21,8 +21,6 @@ type
     Edit4: TEdit;
     Edit5: TEdit;
     Edit6: TEdit;
-    Edit7: TEdit;
-    Edit8: TEdit;
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
@@ -48,14 +46,18 @@ type
     OpenDialog1: TOpenDialog;
     SaveDialog1: TSaveDialog;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
     procedure Edit3Change(Sender: TObject);
+    procedure Edit4Change(Sender: TObject);
+    procedure Edit6Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer
       );
     procedure Label1Click(Sender: TObject);
+    procedure LabeledEdit1Change(Sender: TObject);
     procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
@@ -173,6 +175,49 @@ begin
     Ime[i,j] := Ims[i,j];
 end;
 
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  // RGB to HSV
+  procedure RGBtoHSV(R, G, B: real; Out H, S, V: real);
+{ Prevod RGB to HSV }
+
+var
+  k, r1, g1, b1: real;
+
+begin { RGBtoHSV }
+  V := max(R, G, B);
+  k := min(R, G, B);
+  if V <> 0 then
+    S := (V - k) / V
+  else
+    S := 0;
+  if S <> 0 then
+  begin { if 1 }
+    r1 := (V - R) / (V - k);
+    g1 := (V - G) / (V - k);
+    b1 := (V - B) / (V - k);
+    if V = R then
+      if k = G then
+        H := 5 + b1
+      else
+        H := 1 - g1
+    else
+    if V = G then
+      if k = B then
+        H := 1 + r1
+      else
+        H := 3 - b1
+    else if k = R then
+      H := 3 + g1
+    else
+      H := 5 - r1;
+    H := H * 60;
+  end   { if 1 }
+  else
+    h := 0;
+end;  { RGBtoHSV }
+end;
+
 procedure TForm1.Edit1Change(Sender: TObject);
 begin
 
@@ -184,6 +229,16 @@ begin
 end;
 
 procedure TForm1.Edit3Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Edit4Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Edit6Change(Sender: TObject);
 begin
 
 end;
@@ -212,6 +267,11 @@ begin
 end;
 
 procedure TForm1.Label1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.LabeledEdit1Change(Sender: TObject);
 begin
 
 end;

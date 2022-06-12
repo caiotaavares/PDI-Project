@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href="../style/style.css">
+  <title>Pratica PDI</title>
+</head>
+
+<body>
+  <header>
+    <div id="item-menu">
+      <a href="../index.html" id="item-home"><p>Home</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="./escala_cinza.html" id="item-grayscale"><p>Escala cinza</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="./imagem_negativa.html" id="item-negative"><p>Inverte colorida (Negativo)</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="./canais_rgb.html" id="item-rgb"><p>Canais da imagem (R,G,B)</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="./RGB_HSL.html" id="item-rgb"><p>Manipular RGB - HSL</p></a>
+    </div>
+    </div><div id="item-menu">
+      <a href="./ruido.html" id="item-rgb"><p>Manipular Ruídos</p></a>
+    </div>
+  </div><div id="item-menu">
+    <a href="../scnd-pg.html" id="item-rgb"><p>Próxima página</p></a>
+  </div>
+  </header>
+  <main>
+
+    <menu>
+      <h2>Imagem</h2>
+      <label for="image1"> Abrir imagem: </label>
+			<input id="image1" type="file" accept="image/*"/>
+      <!-- <h2>Função</h2>
+      <div id="container-radio">
+      <input type="radio" id="radio-button" name="function-grayscale" value="media" checked>
+      <label for="html">Filtro da Média</label><br>
+      <input type="radio" id="radio-button" name="function-grayscale" value="mediana">
+      <label for="css">Filtro da Mediana</label><br>
+      </div> -->
+      <h2>Aplicar</h2>
+      <a class="dropdown-item" id="btn-filter-median" class="btn btn-secondary" onclick=filterByMedian()
+                  href="#" type="button">Filtro da Mediana</a>
+    </menu>
+
+    <section>
+      <div class="canvas-box">
+        <p>Entrada</p>
+        <canvas id="frame1"></canvas>
+      </div>
+
+      <div class="canvas-box">
+        <p>Saída</p>
+        <canvas id="frame3"></canvas>
+      </div>
+      <!-- <canvas id="frame3"></canvas> -->
+    </section>
+  </main>
+</body>
+
+<script src="../script/base.js"></script>
+<script src="../src/part-1/filters.js"></script>
+</html>

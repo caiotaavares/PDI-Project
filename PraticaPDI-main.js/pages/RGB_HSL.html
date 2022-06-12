@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href="../style/style.css">
+  <title>Pratica PDI</title>
+</head>
+
+<body>
+  <header>
+    <div id="item-menu">
+      <a href="../index.html" id="item-home"><p>Home</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="./escala_cinza.html" id="item-grayscale"><P>Escala cinza</P></a>
+    </div>
+    <div id="item-menu">
+      <a href="./imagem_negativa.html" id="item-negative"><P>Inverte colorida (Negativo)</P></a>
+    </div>
+    <div id="item-menu">
+      <a href="./canais_rgb.html" id="item-rgb"><p>Canais da imagem (R,G,B)</p></a>
+    </div>
+    <div id="item-menu">
+      <a href="./RGB_HSL.html" id="item-rgb"><p>Manipular RGB - HSL</p></a>
+    </div>
+  </div><div id="item-menu">
+    <a href="../scnd-pg.html" id="item-rgb"><p>Próxima página</p></a>
+  </div>
+  </header>
+  <main>
+
+    <menu>
+      <!-- <h2>Imagem</h2>
+      <label for="image1"> Abrir imagem: </label>
+			<input id="image1" type="file" accept="image/*"/> -->
+      <h2>Transformar RGB em HSL</h2>
+      <p></p>
+      <p>RGB</p>
+      <div>
+        <input type="text" id="r-input" class="num" maxlength="3">
+        <input type="text" id="g-input" class="num" maxlength="3">
+        <input type="text" id="b-input" class="num" maxlength="3">
+      </div>
+      <p></p>
+      <button onclick="rgbToHsl()" class="button" id="btn-transformar">Transformar</button>
+      <p></p>
+      <p>HSL</p>
+      <div>
+        <input type="text" id="h-res" class="num" maxlength="3">
+        <input type="text" id="s-res" class="num" maxlength="3">
+        <input type="text" id="l-res" class="num" maxlength="3">
+      </div>
+      <h2>Transformar HSL em RGB</h2>
+      <p></p>
+      <p>HSL</p>
+      <div>
+        <input type="text" id="h-input" class="num" maxlength="3">
+        <input type="text" id="s-input" class="num" maxlength="3">
+        <input type="text" id="l-input" class="num" maxlength="3">
+      </div>
+      <p></p>
+      <button onclick="hslToRgb()" class="button" id="btn-transformar">Transformar</button>
+      <p></p>
+      <div>
+        <input type="text" id="r-res" class="num">
+        <input type="text" id="g-res" class="num">
+        <input type="text" id="b-res" class="num">
+      </div>
+    </menu>
+
+    <section>
+      <div class="canvas-box">
+        <!-- <p>Entrada</p>
+        <canvas id="frame1 fram-tam"></canvas> -->
+      </div>
+
+      <div class="canvas-box">
+        <!-- <p>Saída</p> -->
+        <!-- <canvas id="frame3 fram-tam"></canvas> -->
+      </div>
+    </section>
+  </main>
+</body>
+
+<script src="../script/RGB_HSL.js"></script>
+
+</html>

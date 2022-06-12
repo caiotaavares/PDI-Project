@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 117
+  Left = 246
   Height = 702
-  Top = 14
+  Top = 119
   Width = 891
   Caption = 'Form1'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 682
+  ClientWidth = 891
   Menu = MainMenu1
   OnCreate = FormCreate
   LCLVersion = '2.2.0.4'
